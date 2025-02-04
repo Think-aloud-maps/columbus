@@ -212,8 +212,8 @@
             { title: "Current Time", info: "3:11 PM." },
             { title: "Address of Origin", info: "170 Old London Rd, West Jefferson, OH 43162." },
             { title: "Address of Destination", info: "1400 Tharp Rd, Alexandria, OH 43001." },
-            { title: "Distance to Destination", info: "0" },
-            { title: "Estimated Time to Destination", info: "0" },
+            { title: "Distance to Destination", info: "46.15 miles." },
+            { title: "Estimated Time to Destination", info: "50 minutes" },
             { title: "State of Charge of Battery", info: "29% charge." },
             { title: "Range of Current Battery", info: "87 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "66 miles." },
@@ -231,10 +231,10 @@
                 name: 'Pathways Financial Credit Union',
 
                 location: '5665 N Hamilton Rd, Columbus 43230',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '15.73',
+                originTime: '19',
+                destDistance: '29.7',
+                destTime: '41',
 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -270,10 +270,10 @@
                 name: 'Huntington Bank',
 
                 location: '1555 W 5th Ave, Columbus 43212',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '32.28',
+                originTime: '38',
+                destDistance: '16.75',
+                destTime: '26',
                 
                 waitTime: [
                         { type: 'J1772', value: '77' }
@@ -935,8 +935,8 @@
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
